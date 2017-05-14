@@ -1,0 +1,258 @@
+@media only screen and (max-width: 1170px) {
+
+/**********公共部分***************/
+
+.line-1 hr{
+	left: 310px;
+}	
+.line-2 hr{
+	left: 345px;
+}
+.services_main,.aboutUs_top,.aboutUs_btm,.team_top,.team_head,.team_btm,.gall_head,.gallery_main,.pricing_top,
+.contact_main,.cont_head,.pri_head,.team_btm_head,.priBtm_head{
+	width: 750px;
+	margin: 0 auto;
+}
+.ser_head,.about_head,.team_head,.gall_head,.pri_head,.cont_head,.team_btm_head,.priBtm_head{
+	width: 720px;
+	height: 140px;
+	
+}
+.ser_head h1,.about_head h1,.team_head h1,.gall_head h1,.pri_head h1,.cont_head h1{
+	font-size: 2.3em;
+}
+.hFont{
+	width: 720px;
+}
+
+.header_main{
+	width: 750px;
+}
+
+/*services*/
+.services{
+	height: 703px;
+}
+.services_main{
+	width: 750px;
+	height: 903px;
+	margin: 0 auto;
+	
+}
+.row{
+	width: 100%;
+	height: 563px;
+	clear: both;
+	margin-top: 55px;
+}
+.row_main{
+	width: 345px;
+	height: 185px;
+	float: left;
+}
+.row_main .row_img{
+	width: 70px;
+	height: 177px;
+	float: left;
+}
+.row_main .row_font{
+	width: 239px;
+	height: 145px;
+	float: left;
+}
+.row_font h1{
+	width: 239px;
+	
+}
+.row_font p{
+	width: 239px;
+
+}
+
+
+/*************aboutUs*************/
+
+/******上半部分**********/
+.aboutUs_top{
+	width: 750px;
+	height: 855px;
+	padding: 100px 0;
+	margin: 0 auto;
+}
+.about_head{
+	padding-bottom: 50px;
+}
+.aboutImg,.aboutFont{
+	width: 345px;
+	height: 335px;
+	padding: 5px 15px;
+}
+.aboutImg{
+	float: left;
+}
+.aboutImg img{
+	width: 345px;
+	height: 345px;
+	
+}
+
+.aboutUs_btm{
+	width: 100%;
+	height: 286px;
+	
+}
+.aboutUs_btmFont{
+	width: 720px;
+	margin: 0 auto;
+	color: white;
+	text-align: center;
+}
+
+.aboutUs_btmFont p{
+	width: 700px;
+	left: 10px;
+}
+
+
+/*  team   */
+
+.team_top{
+	height: 1054px;
+}
+.teamTop_main{
+	width: 750px;
+	
+}
+.teamTop_m{
+	width: 345px;
+	height: 432px;
+}
+.teamTop_m .tm1{
+	width: 263px;
+	height: 280px;
+	margin: 0 auto;
+	display: block;
+}
+.team_btm{
+	width: 100%;
+	height: 838px;
+	background-size: 100% 100%;
+}
+
+.teamBtm_main{
+	width: 750px;
+}
+.team_m{
+	width: 750px;
+	height: 219px;
+	clear: both;
+	margin-top: 10px;
+}
+.teamP{
+	width: 750px;
+	height: 46px;
+	padding: 15px;
+}
+.team_IF{
+	width: 750px;
+}
+
+.team_IF p{
+	left: 70px;
+}
+
+/*gellery*/
+.gallery{
+	height: 534px;
+	padding: 100px 0;
+	padding-bottom: 0;
+}
+.gallery_con{
+	width: 750px;
+}
+.gallery_img{
+	width: 186.75px;
+	height: 136.56px;
+}
+.gallery_img img{
+	width: 168px;
+	height: 112px;
+}
+.gallery_img .gallery_kuang{
+	width: 168px;
+	height: 112px;
+}
+/*pricing*/
+.pricing_top{
+	height: 1434px;
+}
+.pricing_top{
+	width: 750px;
+}
+.priTop_m{
+	width: 345px;
+	height: 535px;
+	margin-bottom:0 ;
+	
+}
+.priTop_m1{
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+.pricing_btm{
+	height: 592px;
+}
+.priBtm_main{
+	width: 750px;
+	height: 432px;
+}
+.priBtm_m{
+	width: 345px;
+	margin-top: 30px;
+}
+/*contact*/
+.contact_main{
+	width: 750px;
+	height: 480px;
+}
+.conLeft{
+	width: 196.66px;
+	position: relative;
+	margin-left: 30px;
+}
+.conLeft h1,.conLeft h2,.conLeft p{
+	position: relative;
+	float: left
+	width: 196.66px;
+}
+
+.conRight{
+	width: 423px;
+	height: 380px;
+	float: left;
+	margin-left: 50px;
+}
+#t1,#t2,#t3{
+	width: 423px;
+	height: 14px;	
+}
+textarea{
+	width: 423px;
+}
+/*底部*/
+.footer{
+	width: 100%;
+	height: 92px;
+	background: white;
+}
+.footer p{
+	text-align: center;
+	line-height: 92px;
+	font-size: 14px;
+}
+.footer a{
+	color: black;
+}
+
+	
+}

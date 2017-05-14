@@ -1,0 +1,374 @@
+@media only screen and (max-width: 750px) {
+	
+
+
+/**********公共部分***************/
+
+.line-1 hr{
+	width: 100px;
+	margin: 15px 0px;
+	position: relative;
+	left: 267px;
+	border: 1px solid #000000;
+}	
+.line-2 hr{
+	width: 30px;
+	position: relative;
+	left: 302px;
+	margin-bottom: 15px;
+	border: 0.1px solid #000000;
+	
+}
+.services_main,.aboutUs_top,.aboutUs_btm,.team_top,.team_head,.team_btm,.gall_head,.gallery_main,.pricing_top,
+.contact_main,.cont_head,.pri_head,.team_btm_head,.priBtm_head{
+	width: 614px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.ser_head,.about_head,.team_head,.gall_head,.pri_head,.cont_head,.team_btm_head,.priBtm_head{
+	width: 614px;
+	height: 140px;
+	text-align: center;
+	margin: 0 auto;
+}
+.ser_head h1,.about_head h1,.team_head h1,.gall_head h1,.pri_head h1,.cont_head h1{
+	font-size: 2em;
+}
+.hFont{
+	width: 480px;
+	margin: 0 auto;
+	line-height: 30px;
+}
+.header_main .btn{
+	width: 40px;
+	height: 30px;
+	border-radius: 5px;
+	border: 2px solid #808080;
+	position:absolute;
+	top: 20px;
+	left: 280px;
+	display: block;
+	transition:.5s ease;
+}
+.header_main .btn:hover{
+	background: #DDDDDD;
+}
+.header_main .btn .line{
+	position: relative;
+	margin-top: 6px;
+	border: 1px solid #808080 ;
+	width: 30px;
+	margin-left: 5px;
+}
+.header{
+	position: relative;
+	height: auto;
+}
+
+.header .nav{
+	float: left;
+	height: 300px;
+	margin-top: 88px;
+	margin-left: -100px;
+	text-align: center;
+	display: none;
+}
+.header .nav li{
+	clear: both;
+	background: black;
+	width: 500px;
+	height: 40px;
+}
+.header .nav li a{
+	display: block;
+	color: white;
+	font-family: "宋体";
+	font-size: 14px;
+	line-height: 40px;
+	padding: 0px 15px;
+	transition:1s ease;
+}
+.header .nav li a:hover{
+	background: #CF295A;
+}
+.header .nav .action{
+	background: #CF295A;
+}
+
+
+/*banner部分*/
+.banner{
+	height: 500px;
+	position: relative;
+	top: 0px;
+}
+.banner_main{
+	height: 500px;
+}
+
+.banner img{
+	
+	height: 500px;
+}
+
+/*services*/
+.services{
+	height: 1055px;
+	position: relative;
+	margin-top: 0px;
+}
+.services_main{
+	width: 614px;
+	height: 1039px;
+	margin: 0 auto;
+	
+}
+.row{
+	width: 100%;
+	height: 1039px;
+	clear: both;
+	margin-top: 55px;
+}
+.row_main{
+	width: 478px;
+	height: 93px;
+	float: left;
+	margin-bottom: 50px;
+}
+.row_font h1{
+	width: 478px;
+}
+.row_font p{
+	width: 478px;
+}
+
+
+
+
+/*************aboutUs*************/
+
+/******上半部分**********/
+.aboutUs_top{
+	width: 640px;
+	height: 1295px;
+	padding: 100px 0;
+	margin: 0 auto;
+}
+.about_head{
+	padding-bottom: 50px;
+}
+.aboutImg,.aboutFont{
+	width: 566px;
+	height: 556px;
+	padding: 5px 15px;
+}
+.aboutImg{
+	float: left;
+}
+.aboutImg img{
+	width: 566px;
+	height: 566px;
+}
+.aboutFont{
+	margin-top: 30px;
+}
+
+
+.aboutUs_btm{
+	width: 100%;
+	height: 305px;
+	
+}
+.aboutUs_btmFont{
+	width: 596px;
+	margin: 0 auto;
+	color: white;
+	text-align: center;
+}
+
+.aboutUs_btmFont p{
+	width: 596px;
+	left: 5px;
+}
+/*  team   */
+
+.team_top{
+	width: 100%;
+	height: 1944px;
+}
+.teamTop_main{
+	width: 614px;
+	
+}
+.teamTop_m{
+	width: 614px;
+	height: 432px;
+	margin-top: 20px;
+}
+.teamTop_m img{
+	display: block;
+	margin: 0 auto;
+}
+.teamTop_m .tm1{
+	width: 263px;
+	height: 280px;
+	margin: 0 auto;
+	display: block;
+}
+
+
+.team_btm{
+	width: 100%;
+	height: 864px;
+	background-size: 100% 100%;
+}
+
+.teamBtm_main{
+	width: 544px;
+	margin: 0 auto;
+}
+.team_m{
+	width: 544px;
+	height: 219px;
+	clear: both;
+	margin: 0 auto;
+	margin-top: 10px;
+}
+.teamP{
+	width: 514px;
+	height: 46px;
+	padding: 15px;
+}
+.team_IF{
+	width: 584px;
+	
+}
+
+.team_IF p{
+	left: 70px;
+}
+
+
+/*gellery*/
+
+.gallery{
+	height: 414px;
+	padding: 100px 0;
+}
+.gallery_con{
+	width: 614px;
+}
+.gallery_img{
+	width: 152.75px;
+	height: 113.56px;
+}
+.gallery_img img{
+	width: 134px;
+	height: 89px;
+}
+.gallery_img .gallery_kuang{
+	width: 134px;
+	height: 89px;
+}
+
+.pricing_top{
+	height: 3030px;
+}
+.pricing_top{
+	width: 614px;
+}
+.priTop_m{
+	width: 560px;
+	height: 635px;
+	margin-bottom:0 ;
+	
+}
+.priTop_m1{
+	margin-top: 50px;
+	margin-bottom: 0px;
+}
+.priTop_m h2{
+	margin-bottom: 40px;
+}
+.priTop_m1 p{
+	margin-top: 30px;
+}
+.priTop_m2 p{
+	margin: 40px;
+}
+.priTop_m a{
+	width: 554px;
+}
+.pricing_btm{
+	height: 1150px;
+}
+.priBtm_main{
+	width: 620px;
+	height: 216px;
+	
+}
+.priBtm_m{
+	width: 620px;
+	margin-bottom: 50px;
+}
+/*contact*/
+.contact{
+	height: 840px;
+}
+.contact_main{
+	width: 590px;
+	height: 864px;
+}
+.conLeft{
+	width: 490px;
+	height: 144px;
+	position: relative;
+	margin-left: 20px;
+	margin-bottom: 50px;
+}
+.conLeft h1,.conLeft h2,.conLeft p{
+	position: relative;
+	float: left
+	width: 490px;
+}
+
+.conRight{
+	width: 520px;
+	height: 380px;
+	clear: both;
+	margin-left: 20px;
+	margin-top: 30px;
+}
+#t1,#t2,#t3{
+	width: 490px;
+	height: 14px;
+	
+}
+textarea{
+	width: 490px;
+}
+
+
+/*底部*/
+.footer{
+	width: 100%;
+	height: 92px;
+	background: white;
+}
+.footer p{
+	text-align: center;
+	line-height: 92px;
+	font-size: 14px;
+}
+.footer a{
+	color: black;
+}
+
+
+
+
+
+
+
+	
+}
