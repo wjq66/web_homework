@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="easyUi/themes/default/easyui.css"/>
+		<link rel="stylesheet" href="easyUi/themes/icon.css" />
+		<link rel="stylesheet" type="text/css" href="easyUi/demo/demo.css"/>
+		<link rel="stylesheet" href="css/houtia.css" />
+		<script src="easyUi/jquery.min.js"></script>
+		<script src="easyUi/jquery.easyui.min.js"></script>
+	</head>
+	<body class="easyui-layout">
+		<div data-options="region:'north',border:false" style="height:60px;background:#B3DFDA;padding:10px 50px;font-size:20px;">后台管理</div>
+		<div data-options="region:'west',split:true,title:'菜单'" style="width:250px;padding:10px;">
+			<div class="easyui-accordion" style="height:300px; border: none;">
+				<div title="新闻管理" data-options="iconCls:'icon-man'" style="overflow:auto;padding:10px;">
+					<ul class="west_ul">
+						<li><a href="iframe/XWGL_xwxxtj.html" target="js">新闻信息添加</a></li>
+						<li><a href="iframe/XWGL_xwxxll.html" target="js">新闻信息浏览</a></li>
+					</ul>
+				</div>
+				<div title="商品管理" data-options="iconCls:'icon-tip'" style="padding:10px;">
+					<ul class="west_ul">
+						<li><a href="iframe/SPGL_splbgl.html" target="js">商品类别管理</a></li>
+						<li><a href="iframe/SPGL_spzc.html" target="js">商品注册</a></li>
+						<li><a href="iframe/SPGL_spll.html" target="js">商品浏览</a></li>
+					</ul>
+				</div>
+				<div title="注销管理" data-options="iconCls:'icon-no'" style="padding:10px;">
+					<ul class="west_ul">
+						<li><a href="iframe/ZXGL.html" target="js">后台管理员注销</a></li>
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div data-options="region:'center',title:'信息详情'">
+			<iframe src="" frameborder="0" name="js" width="100%" height="100%"></iframe>
+		</div>
+	</body>
+</html>

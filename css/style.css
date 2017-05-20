@@ -35,6 +35,7 @@ a{text-decoration: none;}
 	width: 100%;
 	overflow: hidden;
 }
+
 .services_main,.aboutUs_top,.aboutUs_btm,.team_top,.team_head,.team_btm,.gall_head,.gallery_main,.pricing_top,
 .contact_main,.cont_head,.pri_head,.team_btm_head,.priBtm_head{
 	width: 1170px;
@@ -119,7 +120,13 @@ a{text-decoration: none;}
 .btn{
 	display: none;
 }
-
+.header_btn{
+	float: right;
+	margin-right: -170px;
+	line-height: 88px;
+	color: #fff;
+	font-size: 15px;
+}
 /***********主题内容*********************/
 .content{
 	width: 100%;
@@ -178,7 +185,7 @@ a{text-decoration: none;}
 .services{
 	position: relative;
 	width: 100%;
-	height: 605px;
+	height: auto;
 	padding:100px 0;
 	background: #FFD6E3;
 	margin-top: 85px;
@@ -228,6 +235,12 @@ a{text-decoration: none;}
 	text-align: left;
 	padding-left: 20px;
 	font-size: 1.5em;
+}
+.row_font h1 a{
+	color: black;
+}
+.row_font h1 a:hover{
+	text-decoration: underline;
 }
 .row_font p{
 	width: 254px;
@@ -307,6 +320,9 @@ a{text-decoration: none;}
 	margin: 10px 0;
 	line-height: 25px;
 }
+.arrowP p a{
+	color: white;
+}
 .aboutFont hr{
 	border: 0.1 solid white;
 	margin: 10px 0;
@@ -325,11 +341,12 @@ a{text-decoration: none;}
 	text-align: center;
 }
 .aboutUs_btmFont h2{
-	font-size: 15px;
+	font-family: "宋体";
 }
 .aboutUs_btmFont h1{
-	font-size: 2.3em;
+	font-size: 2.0em;
 	margin: 15px 0;
+	font-family: "宋体";
 }
 .aboutUs_btmFont p{
 	display: block;
@@ -456,7 +473,9 @@ a{text-decoration: none;}
 
 
 /*               gellery                 */
-
+.gall_head h1{
+	padding-top: 50px;
+}
 .gallery{
 	width: 100%;
 	height: 772px;
@@ -481,6 +500,7 @@ a{text-decoration: none;}
 	transition: .9s ease;
 	position: absolute;
 }
+
 .gallery_img .gallery_kuang{
 	width: 273.33px;
 	height: 182.31px;
@@ -488,12 +508,23 @@ a{text-decoration: none;}
 	position: absolute;
 	opacity: 0;
 	transition: .3s ease;
-	
 }
-.gallery_img .gallery_kuang:hover{
-	opacity: 0.3;
+.gallery_img .gallery_kuang_p{
+	opacity: 0;
+	transition: .3s ease;
+}
+.gallery_kuang_p{
+	margin-left:80px;
+	margin-top:50px;
+	color:#fff;
 }
 
+.gallery_img:hover .gallery_kuang_p{
+	opacity: 0.9;
+}
+.gallery_img:hover .gallery_kuang{
+	opacity: 0.3;
+}
 /*         pricing           */
 .pricing{
 	width: 100%;
@@ -558,12 +589,14 @@ a{text-decoration: none;}
 	font-size: 14px;
 	margin-top: 10px;
 }
+
 .priTop_m2 p{
 	margin: 30px;
 	font-size: 14px;
 }
 .priTop_m2{
 	color: gray;
+	height: 350px;
 }
 .priTop_m a{
 	display: block;
@@ -602,14 +635,15 @@ a{text-decoration: none;}
 	background: #F5628D;
 	border: 3px solid #CF295A;
 	text-align: center;
-	line-height: 140px;
 	margin: 0 auto;
 	color: white;
 	font-size: 1.5em;
 }
 .priBtm_m p{
 	font-size: 15px;
-	margin-top: 25px;
+	position: relative;
+	top: 50px;
+	margin-bottom: 8px;
 	font-weight: bold;
 }
 

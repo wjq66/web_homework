@@ -1,0 +1,19 @@
+table{
+			float: left;
+			width: 700px;
+			margin-left: 15%;
+			height: auto;
+			border-collapse: collapse;
+			word-break:break-all;
+		}
+		table,tr,td,th{
+			border: 1px solid #000;
+		}
+		table td{
+			text-align: center;
+			padding: 10px;
+		}
+		table th{
+			text-align: center;
+			padding: 10px;
+		}

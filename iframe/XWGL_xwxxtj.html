@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="../css/iframe.css"/>
+	<style>
+		
+		.btn{
+			float: left;
+			margin-left: 50px;
+			top:50px;
+		}
+	</style>
+</head>
+<body>
+	
+	<table>
+		<thead>
+			<tr>
+				<th width="200px">新闻标题</th>
+				<th width="500px">新闻内容</th>
+			</tr>
+		</thead>
+		<tbody id="tbody">
+			
+		</tbody>
+	</table>
+	<button class="btn">添加新闻</button>
+</body>
+<script src="../js/jquery-2.1.0.js"></script>
+<script type="text/javascript">
+	
+			$.ajax({
+					url:"../js/X.json",
+					dataType:"json",
+					type:"get",
+					success:function(data){
+						var table1 = document.getElementById("tbody");
+						var txt = "";
+						for(var da in data){
+							txt = txt+
+								"<tr>"+
+									"<td>"+data[da].name+ "</td>"+
+									"<td>"+data[da].xq+ "</td>"+
+								"</tr>"
+						}
+						console.log(txt);
+//						$("table").innerHTML = txt;
+						table1.innerHTML = txt;
+						/*$.each(data, function(index,obj) {
+							alert(obj.firstName);
+						});*/
+					},error:function(e){
+						alert(0);
+					}
+				})
+
+</script>
+</html>
