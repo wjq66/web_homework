@@ -1,117 +1,57 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<title></title>
-		<link rel="stylesheet" type="text/css" href="../easyUi/themes/default/easyui.css"/>
+    <!DOCTYPE html>
+    <html>
+    <head>
+    	<meta charset="UTF-8">
+    	<title>新闻信息浏览</title>
+    	<link rel="stylesheet" type="text/css" href="../easyUi/themes/default/easyui.css"/>
 		<link rel="stylesheet" href="../easyUi/themes/icon.css" />
 		<link rel="stylesheet" type="text/css" href="../easyUi/demo/demo.css"/>
-		<link rel="stylesheet" type="text/css" href="../css/iframe.css"/>
+		<link rel="stylesheet" href="../css/houtia.css" />
 		<script src="../easyUi/jquery.min.js"></script>
 		<script src="../easyUi/jquery.easyui.min.js"></script>
-	</head>
-	<body>
-		<table id="dg" class="easyui-datagrid" style="width:700px;height:auto"
-			data-options="
-				iconCls: 'icon-edit',
-				singleSelect: true,	
-				toolbar: '#tb',
-				url: 'js/X.json',
-				method: 'get',
-				onClickRow: onClickRow
-			">
-		<thead>
-			<tr>
-				<th data-options="field:'productid',width:150,editor:'textbox'">标题</th>
-				<th data-options="field:'attr1',width:250,editor:'textbox'">内容</th>
-			</tr>
-		</thead>
-		<tbody id="tbody">
-			
-		</tbody>
-	</table>
-	<div id="tb" style="height:auto">
-		<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-add',plain:true" onclick="append()">添加</a>
-		<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-remove',plain:true" onclick="removeit()">删除</a>
-		<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-save',plain:true" onclick="accept()">保存</a>
-		<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-undo',plain:true" onclick="reject()">撤销</a>
-	</div>
-	
-	<script src="../js/jquery-2.1.0.js"></script>
-	<script type="text/javascript">
-		window.onload = function(){
-			$.ajax({
-					url:"js/X.json",
-					dataType:"json",
-					type:"get",
-					success:function(data){
-						var txt = "";
-						var tbody = document.getElementById("tbody");
-						for(var da in data){
-							txt = txt+
-								"<tr>"+
-									"<td>"+data[da].name+ "</td>"+
-									"<td>"+data[da].xq+ "</td>"+
-								"</tr>"
-						}
-						console.log(txt);
-						tbody.innerHTML = txt;
-					},error:function(e){
-						alert(0);
-					}
-				})
-			
-		} 
-		
-		
-		var editIndex = undefined;
-		function endEditing(){
-			if (editIndex == undefined){return true}
-			if ($('#dg').datagrid('validateRow', editIndex)){
-				var ed = $('#dg').datagrid('getEditor', {index:editIndex,field:'productid'});
-				var productname = $(ed.target).combobox('getText');
-				$('#dg').datagrid('getRows')[editIndex]['productname'] = productname;
-				$('#dg').datagrid('endEdit', editIndex);
-				editIndex = undefined;
-				return true;
-			} else {
-				return false;
-			}
-		}
-		function onClickRow(index){
-			if (editIndex != index){
-				if (endEditing()){
-					$('#dg').datagrid('selectRow', index)
-							.datagrid('beginEdit', index);
-					editIndex = index;
-				} else {
-					$('#dg').datagrid('selectRow', editIndex);
-				}
-			}
-		}
-		function append(){
-			if (endEditing()){
-				$('#dg').datagrid('appendRow',{status:'P'});
-				editIndex = $('#dg').datagrid('getRows').length-1;
-				$('#dg').datagrid('selectRow', editIndex)
-						.datagrid('beginEdit', editIndex);
-			}
-		}
-		function removeit(){
-			if (editIndex == undefined){return}
-			$('#dg').datagrid('cancelEdit', editIndex)
-					.datagrid('deleteRow', editIndex);
-			editIndex = undefined;
-		}
-		function accept(){
-			if (endEditing()){
-				$('#dg').datagrid('acceptChanges');
-			}
-		}
-		function reject(){
-			$('#dg').datagrid('rejectChanges');
-			editIndex = undefined;
-		}
-	</script>
-	</body>
-</html>
+    </head>
+    <body>
+    	<div style="margin:20px 0;"></div>
+    	
+    	<table id="dg" class="easyui-datagrid" title="新闻信息浏览" style="width:700px;height:auto"
+    			data-options="
+    				iconCls: 'icon-edit',
+    				singleSelect: true,
+    				toolbar: '#tb',
+    				url: '../js/X.json',
+    				method: 'get',
+    				onClickRow: onClickRow
+    			">
+    		<thead>
+    			<tr>
+    				<!--<th data-options="field:'itemid',width:80">Item ID</th>-->
+    				<th data-options="field:'productid',width:150,align:'center',
+    						formatter:function(value,row){
+    							return row.productname;
+    						},
+    						editor:{
+    							type:'combobox',
+    							options:{
+    								valueField:'productid',
+    								textField:'productname',
+    								method:'get',
+    								url:'../js/X.json',
+    								required:true
+    							}
+    						}">新闻分类</th>
+    				<th data-options="field:'listprice',width:180,align:'right',editor:'textbox'">新闻标题</th>
+    				<th data-options="field:'unitcost',width:364,align:'right',editor:'textbox'">新闻内容</th>
+    			</tr>
+    		</thead>
+    	</table>
+     
+    	<div id="tb" style="height:auto">
+    		<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-add',plain:true" onclick="append()">添加</a>
+    		<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-remove',plain:true" onclick="removeit()">删除</a>
+    		<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-save',plain:true" onclick="accept()">保存</a>
+    		<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-undo',plain:true" onclick="reject()">撤销删除</a>
+    	</div>
+    	
+    </body>
+    <script src="../js/easyui_table.js"></script>
+    </html>

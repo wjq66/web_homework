@@ -1,39 +1,55 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<title></title>
-		<link rel="stylesheet" type="text/css" href="../easyUi/themes/default/easyui.css"/>
+    <!DOCTYPE html>
+    <html>
+    <head>
+    	<meta charset="UTF-8">
+    	<title>商品类别管理</title>
+    	<link rel="stylesheet" type="text/css" href="../easyUi/themes/default/easyui.css"/>
 		<link rel="stylesheet" href="../easyUi/themes/icon.css" />
 		<link rel="stylesheet" type="text/css" href="../easyUi/demo/demo.css"/>
-		<link rel="stylesheet" type="text/css" href="../css/iframe.css"/>
+		<link rel="stylesheet" href="../css/houtia.css" />
 		<script src="../easyUi/jquery.min.js"></script>
 		<script src="../easyUi/jquery.easyui.min.js"></script>
-	</head>
-	<body>
-		<div style="padding:5px; margin-left: 15%;">
-			<a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-add'">添加</a>
-			<a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-cut'">修改</a>
-			<a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-save'">浏览</a>
-			<a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-remove'">删除</a>
-		</div>
-		<table>
-			<thead>
-				<tr>
-					<th width="200px">商品类别</th>
-					<th width="500px">类别描述</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>111</td>
-					<td>1111222221112111222111122222</td>
-				</tr>
-				<tr>
-					<td>2222</td>
-					<td>22223333</td>
-				</tr>
-			</tbody>
-		</table>
-	</body>
-</html>
+    </head>
+    <body>
+    	<div style="margin:20px 0;"></div>
+    	
+    	<table id="dg" class="easyui-datagrid" title="商品类别浏览" style="width:700px;height:auto"
+    			data-options="
+    				iconCls: 'icon-edit',
+    				singleSelect: true,
+    				toolbar: '#tb',
+    				url: '../js/X.json',
+    				method: 'get',
+    				onClickRow: onClickRow
+    			">
+    		<thead>
+    			<tr>
+    				<!--<th data-options="field:'itemid',width:80">Item ID</th>-->
+    				<th data-options="field:'productid',width:150,align:'center',
+    						formatter:function(value,row){
+    							return row.productname;
+    						},
+    						editor:{
+    							type:'combobox',
+    							options:{
+    								valueField:'productid',
+    								textField:'productname',
+    								method:'get',
+    								url:'../js/X.json',
+    								required:true
+    							}
+    						}">商品分类</th>
+    				<th data-options="field:'unitcost',width:545,align:'right',editor:'textbox'">类别说明</th>
+    			</tr>
+    		</thead>
+    	</table>
+     
+    	<div id="tb" style="height:auto">
+    		<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-add',plain:true" onclick="append()">添加</a>
+    		<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-remove',plain:true" onclick="removeit()">删除</a>
+    		<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-save',plain:true" onclick="accept()">保存</a>
+    		<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-undo',plain:true" onclick="reject()">撤销删除</a>
+    	</div>
+    </body>
+    <script src="../js/easyui_table.js"></script>
+    </html>

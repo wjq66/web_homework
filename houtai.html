@@ -16,27 +16,48 @@
 			<div class="easyui-accordion" style="height:300px; border: none;">
 				<div title="新闻管理" data-options="iconCls:'icon-man'" style="overflow:auto;padding:10px;">
 					<ul class="west_ul">
-						<li><a href="iframe/XWGL_xwxxtj.html" target="js">新闻信息添加</a></li>
-						<li><a href="iframe/XWGL_xwxxll.html" target="js">新闻信息浏览</a></li>
+						<li><a  href="javascript:void(0)" class="easyui-linkbutton" onclick="$('#addNews').dialog('open')">新闻信息添加</a></li>
+						<li><a href="iframe/XWGL_xwxxll.html"  class="easyui-linkbutton" target="js">新闻信息浏览</a></li>
 					</ul>
 				</div>
 				<div title="商品管理" data-options="iconCls:'icon-tip'" style="padding:10px;">
 					<ul class="west_ul">
-						<li><a href="iframe/SPGL_splbgl.html" target="js">商品类别管理</a></li>
-						<li><a href="iframe/SPGL_spzc.html" target="js">商品注册</a></li>
-						<li><a href="iframe/SPGL_spll.html" target="js">商品浏览</a></li>
+						<li><a href="iframe/SPGL_splbgl.html"  class="easyui-linkbutton" target="js">商品类别管理</a></li>
+						<li><a  href="javascript:void(0)" class="easyui-linkbutton" onclick="$('#addGoods').dialog('open')">商品注册</a></li>
+						<li><a href="iframe/SPGL_spll.html" class="easyui-linkbutton"  target="js">商品浏览</a></li>
 					</ul>
 				</div>
 				<div title="注销管理" data-options="iconCls:'icon-no'" style="padding:10px;">
 					<ul class="west_ul">
-						<li><a href="iframe/ZXGL.html" target="js">后台管理员注销</a></li>
+						<li><a href="iframe/ZXGL.html" class="easyui-linkbutton"  target="js">后台管理员注销</a></li>
 						
 					</ul>
 				</div>
 			</div>
 		</div>
+		<!--添加新闻对话框-->
+		<div id="addNews" class="easyui-dialog" title="添加    新闻" data-options="iconCls:'icon-save',closed: true" style="width:400px;height:220px;padding:10px">
+			新闻标题：<input id="newsName" type="text" style="width: 280px;"><br><br>
+			新闻内容：<textarea id="newsInformation" cols="37" rows="5"></textarea><br>
+			<button style="margin-left: 60px;">添加</button>
+		</div>
+		<!--添加商品注册对话框-->
+		<div id="addGoods" class="easyui-dialog" title="商品   注册" data-options="iconCls:'icon-save',closed: true" style="width:400px;height:300px;padding:10px">
+			商品名称：<input id="goodsName" type="text" style="width: 280px;"><br><br>
+			商品编号：<input id="goodsNum" type="text" style="width: 280px;"><br><br>
+			商品说明：<textarea id="goodsInformation" cols="37" rows="5"></textarea><br>
+			<button style="margin-left: 60px;">添加</button>
+		</div>
+
+
 		<div data-options="region:'center',title:'信息详情'">
 			<iframe src="" frameborder="0" name="js" width="100%" height="100%"></iframe>
 		</div>
 	</body>
+	
+	
+	<script type="text/javascript">
+		
+	    
+	</script>
 </html>
