@@ -6,7 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="../css/iframe.css"/>
 	<style>
 		
-		.btn{
+		#btn{
 			float: left;
 			margin-left: 50px;
 			top:50px;
@@ -26,7 +26,8 @@
 			
 		</tbody>
 	</table>
-	<button class="btn">添加新闻</button>
+	<button id="addBtn">添加新闻</button>
+	<button id="saveBtn">保存新闻</button>
 </body>
 <script src="../js/jquery-2.1.0.js"></script>
 <script type="text/javascript">
@@ -55,6 +56,20 @@
 						alert(0);
 					}
 				})
+			
+			
+			var addBtn = document.getElementById("addBtn");
+			var saveBtn = document.getElementById("saveBtn");
+			addBtn.onclick = function(){
+				 var newRow=
+				 		"<tr>"+
+							"<td>"+"<input type='text' class='inputOne'>"+ "</td>"+
+							"<td>"+"<input type='text' class='inputTwo'>"+ "</td>"+
+						"</tr>"
+					$('#tbody').append(newRow);  
+    			
+			}
+			
 
 </script>
 </html>

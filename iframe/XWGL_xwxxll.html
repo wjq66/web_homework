@@ -11,49 +11,59 @@
 		<script src="../easyUi/jquery.easyui.min.js"></script>
 	</head>
 	<body>
-			<table id="dg" class="easyui-datagrid" style="width:700px;height:auto"
+		<table id="dg" class="easyui-datagrid" style="width:700px;height:auto"
 			data-options="
 				iconCls: 'icon-edit',
 				singleSelect: true,	
 				toolbar: '#tb',
-				url: 'datagrid_data1.json',
+				url: 'js/X.json',
 				method: 'get',
 				onClickRow: onClickRow
 			">
 		<thead>
 			<tr>
-				<th data-options="field:'itemid',width:80">Item ID</th>
-				<th data-options="field:'productid',width:100,
-						formatter:function(value,row){
-							return row.productname;
-						},
-						editor:{
-							type:'combobox',
-							options:{
-								valueField:'productid',
-								textField:'productname',
-								method:'get',
-								url:'products.json',
-								required:true
-							}
-						}">Product</th>
-				<th data-options="field:'listprice',width:80,align:'right',editor:{type:'numberbox',options:{precision:1}}">List Price</th>
-				<th data-options="field:'unitcost',width:80,align:'right',editor:'numberbox'">Unit Cost</th>
-				<th data-options="field:'attr1',width:250,editor:'textbox'">Attribute</th>
-				<th data-options="field:'status',width:60,align:'center',editor:{type:'checkbox',options:{on:'P',off:''}}">Status</th>
+				<th data-options="field:'productid',width:150,editor:'textbox'">标题</th>
+				<th data-options="field:'attr1',width:250,editor:'textbox'">内容</th>
 			</tr>
 		</thead>
+		<tbody id="tbody">
+			
+		</tbody>
 	</table>
- 
 	<div id="tb" style="height:auto">
-		<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-add',plain:true" onclick="append()">Append</a>
-		<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-remove',plain:true" onclick="removeit()">Remove</a>
-		<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-save',plain:true" onclick="accept()">Accept</a>
-		<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-undo',plain:true" onclick="reject()">Reject</a>
-		<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-search',plain:true" onclick="getChanges()">GetChanges</a>
+		<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-add',plain:true" onclick="append()">添加</a>
+		<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-remove',plain:true" onclick="removeit()">删除</a>
+		<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-save',plain:true" onclick="accept()">保存</a>
+		<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-undo',plain:true" onclick="reject()">撤销</a>
 	</div>
 	
+	<script src="../js/jquery-2.1.0.js"></script>
 	<script type="text/javascript">
+		window.onload = function(){
+			$.ajax({
+					url:"js/X.json",
+					dataType:"json",
+					type:"get",
+					success:function(data){
+						var txt = "";
+						var tbody = document.getElementById("tbody");
+						for(var da in data){
+							txt = txt+
+								"<tr>"+
+									"<td>"+data[da].name+ "</td>"+
+									"<td>"+data[da].xq+ "</td>"+
+								"</tr>"
+						}
+						console.log(txt);
+						tbody.innerHTML = txt;
+					},error:function(e){
+						alert(0);
+					}
+				})
+			
+		} 
+		
+		
 		var editIndex = undefined;
 		function endEditing(){
 			if (editIndex == undefined){return true}
@@ -101,10 +111,6 @@
 		function reject(){
 			$('#dg').datagrid('rejectChanges');
 			editIndex = undefined;
-		}
-		function getChanges(){
-			var rows = $('#dg').datagrid('getChanges');
-			alert(rows.length+' rows are changed!');
 		}
 	</script>
 	</body>
