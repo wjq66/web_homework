@@ -8,6 +8,9 @@
 				padding: 0px;
 				margin: 0px;
 			}
+			a{
+				text-decoration: none;
+			}
 			body{
 				background: url(images/login_bg.png) ;
 				background-size: 100% 100%;
@@ -19,27 +22,118 @@
 				height: 793px;
 				background: rgba(255,255,255,0.7);
 			}
-			.loginBox{
-				position: absolute;
-				left: 60%;
-				top: 35%;
-				width: 22%;
+			
+			.login_box{
+				width: 250px;
 				height: 250px;
-				background: rgba(0,0,0,0.2);
+				position: absolute;
+				top: 50%;
+				margin-top: -150px;
+				left: 50%;
+				margin-left: -120px;
 				
 			}
-			#login_form{
+			.login_zhuce,.login_denglu,.login_index{
+				cursor: pointer; 
+				height: 50px;
+				width: 250px;
+				background: rgba(0,0,0,0.1);
 				margin-top: 20px;
-				margin-left: 15%;
+				text-align: center;
+				line-height: 50px;
+				letter-spacing: 15px;
+				font-size: 20px;
+			}
+			.login_index a{
+				color: #000;
+			}
+			.login_index{
+				background: #1c8bec;
+				margin-top: 30px;
+			}
+			.login_line{
+				width: 200px;
+				height: 2px;
+				background: #000;
+				margin-left: 25px;
+				margin-top: 30px;
+			}
+			#register_form,#login_form{
+				position: absolute;
+				top: 50%;
+				margin-top: -150px;
+				left: 50%;
+				margin-left: -120px;
+				width: 250px;
+				height: 250px;
+				line-height: 55px;
+				display:none;
+			}
+			.login_form_p,.register_form_p{
+				font-size: 35px;
+				text-align: center;
+				line-height: 70px;
+				/*font-family: forte;*/
+			}
+			#login_form input,#register_form input{
+				height: 30px;
+				width: 250px;
+				font-size: 16px;
+			} 
+			#login_form .login_btn,#register_form .register_btn{
+				width: 250px;
+				height: 40px;
+				margin-top: 20px;
+				text-align: center;
+				font-size: 18px;
+				cursor: pointer;
+				background:#1c8bec ;
+			}.welcome{
+				font-size: 50px;
+				font-family: forte;
+				position: absolute;
+				top: 100px;
+				left: 50%;
+				margin-left: -210px;
+				
 			}
 		</style>
 	</head>
 	<body>
+		<!--背景上面的白色覆盖-->
 		<div class="background_dox"></div>
-		<div class="loginBox">
-			<form id="login_form" action="#">
-				<label for="">用户名：</label><input type="text">
-			</form>
+		<div class="welcome">welcome to anyang</div>
+		<div class="login_box">
+			<div class="login_denglu">登录</div>
+			<div class="login_zhuce">注册</div>
+			<div class="login_line"></div>
+			<div class="login_index"><a href="index.html">首页</a></div>
 		</div>
+		<form id="login_form" action="#">
+			<p class="login_form_p">SIGN IN</p>
+			<input type="text" placeholder="用户名"><br>
+			<input type="text" placeholder="密码"/>
+			<button class="login_btn">登录</button>
+		</form>
+		<form id="register_form" action="#">
+			<p class="register_form_p">REGISTER</p>
+			<input type="text" placeholder="用户名"><br>
+			<input type="text" placeholder="密码"/>
+			<button class="register_btn">注册</button>
+		</form>
 	</body>
+	
+	<script src="js/jquery-2.1.0.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".login_denglu").click(function(){
+				$(".login_box").fadeOut('slow');
+				$("#login_form").fadeIn('slow');
+			});
+			$(".login_zhuce").click(function(){
+				$(".login_box").fadeOut('slow');
+				$("#register_form").fadeIn('slow');
+			});
+		})
+	</script>
 </html>
