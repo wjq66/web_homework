@@ -1,53 +1,48 @@
-    <!DOCTYPE html>
-    <html>
-    <head>
-    	<meta charset="UTF-8">
-    	<title>商品浏览</title>
-    	<link rel="stylesheet" type="text/css" href="../easyUi/themes/default/easyui.css"/>
-		<link rel="stylesheet" href="../easyUi/themes/icon.css" />
-		<link rel="stylesheet" type="text/css" href="../easyUi/demo/demo.css"/>
-		<link rel="stylesheet" href="../css/houtia.css" />
-		<script src="../easyUi/jquery.min.js"></script>
-		<script src="../easyUi/jquery.easyui.min.js"></script>
-    </head>
-    <body>
-    	<div style="margin:20px 0;"></div>
-    	
-    	<table id="dg" class="easyui-datagrid" title="商品浏览" style="width:700px;height:auto"
-    			data-options="
-    				iconCls: 'icon-edit',
-    				singleSelect: true,
-    				toolbar: '#tb',
-    				url: '../js/X.json',
-    				method: 'get',
-    				onClickRow: onClickRow
-    			">
-    		<thead>
-    			<tr>
-    				<!--<th data-options="field:'itemid',width:80">Item ID</th>-->
-    				<th data-options="field:'productid',width:150,align:'center',
-    						formatter:function(value,row){
-    							return row.productname;
-    						},
-    						editor:{
-    							type:'combobox',
-    							options:{
-    								valueField:'productid',
-    								textField:'productname',
-    								method:'get',
-    								url:'../js/X.json',
-    								required:true
-    							}
-    						}">商品分类</th>
-    				<th data-options="field:'unitcost',width:180,align:'right',editor:'textbox'">商品名称</th>
-    				<th data-options="field:'listprice',width:360,align:'right',editor:'textbox'">商品信息</th>
-    			</tr>
-    		</thead>
-    	</table>
-     
-    	<div id="tb" style="height:auto">
-    		<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-remove',plain:true" onclick="removeit()">删除</a>
-    	</div>
-    </body>
-    <script src="../js/easyui_table.js"></script>
-    </html>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>商品浏览</title>
+		<link rel="stylesheet" href="../css/iframe.css" />
+	    <script src="../js/jquery-2.1.0.js"></script>
+	    <script src="../js/SPGL_spll.js"></script>
+	</head>
+	<body>
+	    <table id="myTable">
+	        <thead>
+		        <tr>
+		            <th>商品类别</th>
+		            <th>商品名称</th>
+		            <th>商品说明</th>
+		            <th>操作</th>
+		        </tr>
+		    </thead>
+		    <tbody id="tbody">
+		 
+	        </tbody>
+	    </table>
+	  <!--  <button id="addBtn">添加商品</button>-->
+	    <!--阴影-->
+	    <div id="bgbox"></div>
+	    <!--添加-->
+	   <!-- <div id="addLB">
+	    	<form action="" id="add_content" style="margin-top: 20px;">
+	    		<label for="spName">商品名称：</label><input type="text" id="spName" style="width: 210px;"/><br>
+	    		<label for="spLb">商品类别：</label><input type="text" id="spLb" style="width: 210px;"/><br>
+	    		<label for="spTxt">商品说明：</label><textarea id="spTxt" rows="8" cols="30"></textarea>
+	    	</form>
+	    	<button id="addsure">确定</button>
+	    </div>-->
+	    <!--查看-->
+	    <div id="check">
+	    	<div id="check_content"></div>
+	    	<button id="checksure">确定</button>
+	    </div>
+	    <!--修改-->
+	   <div id="change">
+	    	<form action="" id="change_content">
+	    	</form>
+	    	<button id="changesure">确定</button>
+	    </div>
+	</body>
+</html>

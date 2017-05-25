@@ -1,0 +1,147 @@
+[
+  {
+    "id": 1,
+    "title": "测试1",
+    "content": "测试1新闻，用来测试新闻的读取",
+    "author": "佚名",
+    "created_at": null,
+    "updated_at": null
+  },
+  {
+    "id": 2,
+    "title": "测试2",
+    "content": "这是测试2的新闻，用来进行测试",
+    "author": "佚名",
+    "created_at": null,
+    "updated_at": null
+  },
+  {
+    "id": 3,
+    "title": "AAAA",
+    "content": "AAAAAAAAAAAAAAAAAAAA",
+    "author": "超级管理员",
+    "created_at": {
+      "date": "2017-05-20 17:42:03.000000",
+      "timezone_type": 3,
+      "timezone": "PRC"
+    },
+    "updated_at": {
+      "date": "2017-05-20 17:42:03.000000",
+      "timezone_type": 3,
+      "timezone": "PRC"
+    }
+  },
+  {
+    "id": 4,
+    "title": "AAAAAAA",
+    "content": "AAAAAAAAAAAAAAAAAAAAA",
+    "author": "超级管理员",
+    "created_at": {
+      "date": "2017-05-20 17:43:18.000000",
+      "timezone_type": 3,
+      "timezone": "PRC"
+    },
+    "updated_at": {
+      "date": "2017-05-20 17:43:18.000000",
+      "timezone_type": 3,
+      "timezone": "PRC"
+    }
+  },
+  {
+    "id": 5,
+    "title": "SSSSSSS",
+    "content": "SSSSSSSSSSSSSSSSSSSSSs",
+    "author": "超级管理员",
+    "created_at": {
+      "date": "2017-05-20 19:41:36.000000",
+      "timezone_type": 3,
+      "timezone": "PRC"
+    },
+    "updated_at": {
+      "date": "2017-05-20 19:41:36.000000",
+      "timezone_type": 3,
+      "timezone": "PRC"
+    }
+  },
+  {
+    "id": 6,
+    "title": "EEEE",
+    "content": "EEEEEEEEEEEEEEEE",
+    "author": "超级管理员",
+    "created_at": {
+      "date": "2017-05-20 19:45:02.000000",
+      "timezone_type": 3,
+      "timezone": "PRC"
+    },
+    "updated_at": {
+      "date": "2017-05-20 19:45:02.000000",
+      "timezone_type": 3,
+      "timezone": "PRC"
+    }
+  },
+  {
+    "id": 7,
+    "title": "HHHH",
+    "content": "HHHHHHHHHHHHH",
+    "author": "超级管理员",
+    "created_at": {
+      "date": "2017-05-21 12:47:33.000000",
+      "timezone_type": 3,
+      "timezone": "PRC"
+    },
+    "updated_at": {
+      "date": "2017-05-21 12:47:33.000000",
+      "timezone_type": 3,
+      "timezone": "PRC"
+    }
+  },
+  {
+    "id": 8,
+    "title": "PPPPP",
+    "content": "PPPPPPPPPPPPPPPPPPPPPPPPP",
+    "author": "超级管理员",
+    "created_at": {
+      "date": "2017-05-21 12:54:33.000000",
+      "timezone_type": 3,
+      "timezone": "PRC"
+    },
+    "updated_at": {
+      "date": "2017-05-21 12:54:33.000000",
+      "timezone_type": 3,
+      "timezone": "PRC"
+    }
+  },
+  {
+    "id": 9,
+    "title": "测试新闻",
+    "content": "来吧",
+    "author": "超级管理员",
+    "created_at": {
+      "date": "2017-05-21 16:30:46.000000",
+      "timezone_type": 3,
+      "timezone": "PRC"
+    },
+    "updated_at": {
+      "date": "2017-05-21 16:30:46.000000",
+      "timezone_type": 3,
+      "timezone": "PRC"
+    }
+  },
+  {
+    "id": 10,
+    "title": "测试新闻来阿布",
+    "content": "阿诗丹顿",
+    "author": "超级管理员",
+    "created_at": {
+      "date": "2017-05-21 16:30:59.000000",
+      "timezone_type": 3,
+      "timezone": "PRC"
+    },
+    "updated_at": {
+      "date": "2017-05-21 16:30:59.000000",
+      "timezone_type": 3,
+      "timezone": "PRC"
+    }
+  }
+]
+
