@@ -47,7 +47,7 @@ $(document).ready(function(){
 				txt2[da] = 
 					"<label>id:</label><br>"+"<input value="+data[da].id+" style='margin-left:50px;width:250px' type='text' id='id"+da+"'/><br>"+
 					"<label>title:</label><br>"+"<input value="+data[da].title+" style='margin-left:50px;width:250px' type='text' id='title"+da+"'/><br>"+
-					"<label>content:</label><br>"+"<textarea cols='38' rows='6' style='margin-left:50px' type='text' id='content"+da+"'/>"+data[da].content+"</textarea>"
+					"<label>content:</label><br>"+"<textarea class='Text2' style='margin-left:50px' type='text' id='content"+da+"'/>"+data[da].content+"</textarea>"
 					
 			}
 			

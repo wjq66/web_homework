@@ -15,6 +15,14 @@ th,td{
 th{
     background-color:#b5d6e6;
 }
+.Text1{
+	width: 250px;
+	height: 80px;
+}
+.Text2{
+	width: 250px;
+	height: 80px;
+}
 input{
     margin-bottom: 20px;
 }
